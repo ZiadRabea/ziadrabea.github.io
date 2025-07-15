@@ -3,33 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/jpg" href="imgs/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css"> 
-  <title>OP Industries</title>
-  <style>
-    
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="imgs/logo.jpg">
+  <title>OP Industires</title>
+  <script>
+    // Change navbar style on scroll for a subtle animation effect
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <img style="border-radius: 50%;" src="imgs/logo.jpg" width="50" height="50" alt="Logo" class="logo">
-    <h1 class="site-title">OP Industires</h1>
+  <!-- Enhanced Fixed Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-container">
+        <img src="imgs/logo.jpg" alt="Logo">
+        <span class="site-title">OP Industires</span>
+      </div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="ripple"></div>
     <div class="ripple"></div>
     <div class="ripple"></div>
-    <div>
-      <h1>Neurotech That Heals<br><span>Restoring Hope Through Tech</span></h1>
-      <a href="#" class="cta-button">Reclaim Possibility</a>
+    <div style="z-index: 1000;">
+      <h1>Neurotech That Heals</h1>
+      <h1>Restoring Hope Through Tech</h1>
+      <a href="#products" class="cta-button">Reclaim Possibility</a>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="features about-us" id="about">
+    <h2>About Us</h2>
+    <div class="content-container">
+      <div class="image">
+        <img src="imgs/BG.jpeg" alt="About us image">
+      </div>
+      <div class="text">
+        <p>
+            OP Industries is a neurotechnology company on a mission to bring back hope to those who have no other choice. Our goal is to restore lost abilities—sight, movement, independence—through noninvasive brain stimulation, AI-assisted sensing, and real-time neural interfacing. We combine science, software, and compassion to create tools that reconnect people with the world around them.
+        </p>
+        <br>
+        <p>
+            To support this larger mission, we build practical tools under OP Microservices—systems that solve immediate problems while paving the way for bigger breakthroughs. From SchoolOS for underserved schools, to voice-powered apps for the visually impaired, every microservice is designed with intention. These aren’t side projects—they’re foundations that help people reclaim time, dignity, and access to the future.
+        </p>
+        <br>
+        <p>
+            At its core, OP Industries stands for building through pain. We take what life has broken and rebuild it with science, heart, and code. Our work is not just technological—it’s human. And everything we do points to one belief: no one should be left behind just because the world wasn’t built for them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- Purpose Section -->
+<section class="features why-us" id="why-us">
+    <h2>When the Impossible Becomes the Drive</h2>
+    <div class="content-container">
+      <div class="image">
+        <img src="imgs/mission.png" alt="Hope-driven innovation">
+      </div>
+      <div class="text">
+        <ul>
+          <li>We believe technology isn’t a luxury—it’s for those who were never given a fair chance</li>
+          <li>We build solutions that restore hope to those with no options left</li>
+          <li>We turn pain into tools that bring people back to life—not as victims, but as creators</li>
+          <li>Every product we create is a promise: no one gets left behind again</li>
+        </ul>
+      </div>
     </div>
   </section>
   
   <!-- Features Grid -->
-  <section class="features">
+  <section class="features" id="products">
     <h2>Our Products</h2>
     <div class="features-grid">
       <div class="feature-item">
@@ -64,7 +125,7 @@
   </section>
   
   <!-- Footer with Contact Form -->
-  <footer>
+  <footer id="contact">
     <h3>Get in Touch</h3>
     <form class="contact-form"action="https://formspree.io/f/mwpbqgby" method="POST">
       <input type="text" placeholder="Your Name" required>
@@ -77,5 +138,6 @@
       <a href="#" class="cta-button">Join the Mission</a>
     </p>
   </footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"95f106640ad73c3d","version":"2025.6.2","r":1,"token":"467d52fbf5f745578d9893460e9119a9","serverTiming":{"name":{"cfL4":true}}}' crossorigin="anonymous"></script>
 </body>
 </html>
